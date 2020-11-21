@@ -5,6 +5,7 @@ $liquid: rgba(174, 1, 190, 0.5);
 $bottomHeight: 100px;
 $lampWidth: 200px;
 $lava-1-ellipse: 90% 10%;
+$whitenShadow: 80;
 
 .lava-1 {
   position: absolute;
@@ -15,6 +16,7 @@ $lava-1-ellipse: 90% 10%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 20;
+  box-shadow: 0px 0px 100px rgb(255, 0, 0);
   border-radius: 5000px;
 }
 
@@ -94,6 +96,43 @@ $lava-1-ellipse: 90% 10%;
   clip-path: ellipse(20% 40%);
 }
 
+.lamp-shadow {
+  width: $lampWidth / 5;
+  height: $bottomHeight * 4;
+  position: absolute;
+  left: 50%;
+  transform: skewX(8.5deg) translateX(75%);
+  z-index: -500;
+  background-color: rgba(255,255,255 , 0.0);
+  shape-outside: polygon(
+    0% 100%,
+    100% 100%,
+    70% 0%,
+    30% 0%,
+  );
+  box-shadow: 0px 0px 100px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
+}
+
+.lamp-shadow-mid {
+
+}
+.lamp-shadow-2 {
+  width: $lampWidth / 5;
+  height: $bottomHeight * 4;
+  position: absolute;
+  left: 50%;
+  transform: skewX(-8.5deg) translateX(-175%);
+  z-index: -500;
+  background-color: rgba(255,255,255 , 0.0);
+  shape-outside: polygon(
+    0% 100%,
+    100% 100%,
+    70% 0%,
+    30% 0%,
+  );
+  box-shadow: 0px 0px 100px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
+}
+
 // absolute position, same as .lamp div, the only difference is the color and color orientation.
 // 50% transparent so that the color of the div behind it is seen as well.
 .lamp-translucent-cover {
@@ -138,7 +177,7 @@ $lava-1-ellipse: 90% 10%;
     100% 100%,
     70% 0%,
     30% 0%,
-  );
+    );
 }
 
 .middle-ellipse {

@@ -7,6 +7,7 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 20;
+  box-shadow: 0px 0px 100px red;
   border-radius: 5000px;
 }
 
@@ -67,6 +68,30 @@
   z-index: -1;
   shape-outside: ellipse(20% 40%);
   clip-path: ellipse(20% 40%);
+}
+
+.lamp-shadow {
+  width: 40px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: skewX(8.5deg) translateX(75%);
+  z-index: -500;
+  background-color: rgba(255, 255, 255, 0);
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  box-shadow: 0px 0px 100px #9b50d2;
+}
+
+.lamp-shadow-2 {
+  width: 40px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: skewX(-8.5deg) translateX(-175%);
+  z-index: -500;
+  background-color: rgba(255, 255, 255, 0);
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  box-shadow: 0px 0px 100px #9b50d2;
 }
 
 .lamp-translucent-cover {
