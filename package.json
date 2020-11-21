@@ -1,0 +1,17 @@
+{
+  "name": "lava-lamps",
+  "version": "1.0.0",
+  "description": "Lava Lamps page!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js",
+    "sass": "cd public/styles && sass.bat input.scss style.css && cd ../..",
+    "watch-sass": "sass.bat --watch public/styles/input.scss public/styles/style.css"
+  },
+  "author": "Kevin Miller",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

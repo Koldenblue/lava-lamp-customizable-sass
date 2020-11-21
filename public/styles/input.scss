@@ -1,0 +1,31 @@
+$main: indigo;
+$text: rgb(215, 250, 245);
+$second: rgb(174, 1, 190);
+
+.jumbotron {
+  font-family: 'Modak', cursive;
+  // background-attachment: fixed;
+  background-image: url('../img/abstract-wax.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron h1, .jumbotron p {
+  color: $text;
+  background: -webkit-linear-gradient($main, $second);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 6rem;
+}
+
+.navbar {
+  background-color: $main;
+  
+}
+.navbar a {
+  color: $text;
+}
