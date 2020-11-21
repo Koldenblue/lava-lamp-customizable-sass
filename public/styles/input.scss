@@ -1,6 +1,8 @@
+@use 'lava';
 $main: indigo;
 $text: rgb(215, 250, 245);
 $second: rgb(174, 1, 190);
+
 
 .jumbotron {
   font-family: 'Modak', cursive;
@@ -8,23 +10,25 @@ $second: rgb(174, 1, 190);
   background-image: url('../img/abstract-wax.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 1px solid $main;
 }
 
-.jumbotron h1, .jumbotron p {
-  color: $text;
-  background: -webkit-linear-gradient($main, $second);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-}
-
-.jumbotron h1 {
-  font-size: 6rem;
+.jumbotron {
+  h1, p {
+    color: $text;
+    background: -webkit-linear-gradient($main, $second);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  h1 {
+    font-size: 6rem;
+  }
 }
 
 .navbar {
   background-color: $main;
-  
+  box-shadow: 3px 0 3px black;
 }
 .navbar a {
   color: $text;

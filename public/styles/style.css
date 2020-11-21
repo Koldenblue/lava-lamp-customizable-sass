@@ -1,8 +1,22 @@
+.lamp-top {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  shape-outside: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  background: -webkit-linear-gradient(indigo, #ae01be);
+  border-radius: 10px;
+  border-bottom: 3px inset black;
+}
+
 .jumbotron {
   font-family: "Modak", cursive;
   background-image: url("../img/abstract-wax.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 1px solid indigo;
 }
 
 .jumbotron h1, .jumbotron p {
@@ -12,13 +26,13 @@
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
-
 .jumbotron h1 {
   font-size: 6rem;
 }
 
 .navbar {
   background-color: indigo;
+  box-shadow: 3px 0 3px black;
 }
 
 .navbar a {

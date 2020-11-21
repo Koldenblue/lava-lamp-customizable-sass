@@ -1,0 +1,30 @@
+// stylesheet for animated lava lamp
+$main: indigo;
+$second: rgb(174, 1, 190);
+
+.lamp-top {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  // border-left: 50px solid transparent;
+  // border-right: 50px solid transparent;
+  // border-top: 40px solid red;
+  // border-bottom: 80px solid blue;
+  shape-outside: polygon(
+    20% 0,
+    80% 0,
+    100% 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    20% 0,
+    80% 0,
+    100% 100%,
+    0 100%
+  );
+  background: -webkit-linear-gradient($main, $second);
+  border-radius: 10px;
+  border-bottom: 3px inset black;
+}
