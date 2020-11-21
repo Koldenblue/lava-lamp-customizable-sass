@@ -7,6 +7,27 @@ $lampWidth: 200px;
 $lava-1-ellipse: 90% 10%;
 $whitenShadow: 80;
 
+.lava-2 {
+  position: absolute;
+  background: rgb(252,176,69);
+  background: linear-gradient(0deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 53%, rgba(180,58,122,1) 100%); 
+  // padding-top: $lampWidth / 5.0;
+  // padding-right: $lampWidth / 5.5;
+  // padding-bottom: $lampWidth / 5;
+  // padding-left: $lampWidth / 5;
+  width: $lampWidth / 5;
+  height: $lampWidth / 4;
+  top: 30%;
+  left: 40%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 20;
+  box-shadow: 0px 0px 50px rgb(255, 0, 0);
+  border-radius: 5000px;
+  // shape-outside: ellipse(30% 45%);
+  // clip-path: ellipse(30% 45%);
+}
+
+// lava in the lamp
 .lava-1 {
   position: absolute;
   background: rgb(252,176,69);
@@ -46,6 +67,7 @@ $whitenShadow: 80;
   }
 }
 
+// ellipse on top of cap
 .top-cap-ellipse {
   background: rgba(253,29,29,1);
   height: $bottomHeight / 10;
@@ -82,6 +104,7 @@ $whitenShadow: 80;
   );
 } 
 
+// ellipse on bottom of cap
 .cap-ellipse {
   background-color: adjust-color($main, $red: 50, $blue: 50, $green: 50);
   height: $bottomHeight / 10;
@@ -96,12 +119,13 @@ $whitenShadow: 80;
   clip-path: ellipse(20% 40%);
 }
 
+// right side shadow
 .lamp-shadow {
-  width: $lampWidth / 5;
+  width: $lampWidth / 10;
   height: $bottomHeight * 4;
   position: absolute;
   left: 50%;
-  transform: skewX(8.5deg) translateX(75%);
+  transform: skewX(8.5deg) translateX(260%);
   z-index: -500;
   background-color: rgba(255,255,255 , 0.0);
   shape-outside: polygon(
@@ -110,18 +134,43 @@ $whitenShadow: 80;
     70% 0%,
     30% 0%,
   );
-  box-shadow: 0px 0px 100px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
+  box-shadow: 0px 0px 75px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
 }
 
+// a polygon to cover the gap between the two shadow boxes on the side
 .lamp-shadow-mid {
-
+  position: absolute;
+  left: 50%;
+  width: $lampWidth;
+  transform: translateX(-50%);
+  height: ($bottomHeight * 4);
+  shape-outside: polygon(
+    0% 100%,
+    100% 100%,
+    70% 0%,
+    30% 0%,
+  );
+  clip-path: polygon(
+    0% 100%,
+    100% 100%,
+    70% 0%,
+    30% 0%,
+    );
+  background-color:  rgba(0, 0, 0, 0);
+  
+  z-index: -400;
+  // border-left: $bottomHeight solid transparent;
+  // border-right: $bottomHeight solid transparent;
+  // border-bottom: ($bottomHeight * 4) solid blue;
 }
+
+// left side shadow
 .lamp-shadow-2 {
-  width: $lampWidth / 5;
+  width: $lampWidth / 10;
   height: $bottomHeight * 4;
   position: absolute;
   left: 50%;
-  transform: skewX(-8.5deg) translateX(-175%);
+  transform: skewX(-8.5deg) translateX(-360%);
   z-index: -500;
   background-color: rgba(255,255,255 , 0.0);
   shape-outside: polygon(
@@ -130,11 +179,13 @@ $whitenShadow: 80;
     70% 0%,
     30% 0%,
   );
-  box-shadow: 0px 0px 100px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
+  box-shadow: 0px 0px 75px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
 }
 
 // absolute position, same as .lamp div, the only difference is the color and color orientation.
 // 50% transparent so that the color of the div behind it is seen as well.
+// the purpose of this is to give the lamp a more realistic color gradient, starting from bottom center
+// this also covers the lava ball
 .lamp-translucent-cover {
   width: $lampWidth;
   height: $bottomHeight * 4;
@@ -158,6 +209,7 @@ $whitenShadow: 80;
   );
 }
 
+// the glass lamp
 .lamp {
   width: $lampWidth;
   height: $bottomHeight * 4;
@@ -180,6 +232,7 @@ $whitenShadow: 80;
     );
 }
 
+// ellipse between glass and base
 .middle-ellipse {
   background-color: $liquid;
   height: $bottomHeight / 10;
@@ -194,6 +247,7 @@ $whitenShadow: 80;
   clip-path: ellipse(50% 50%);
 }
 
+// top of base
 .lamp-top {
   width: $lampWidth;
   height: $bottomHeight * 1.3;
@@ -218,16 +272,13 @@ $whitenShadow: 80;
   z-index: 2;
 }
 
+// bottom of base
 .lamp-bottom {
   width: $lampWidth;
   height: $bottomHeight;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  // border-left: 50px solid transparent;
-  // border-right: 50px solid transparent;
-  // border-top: 40px solid red;
-  // border-bottom: 80px solid blue;
   shape-outside: polygon(
     20% 0,
     80% 0,
@@ -242,10 +293,10 @@ $whitenShadow: 80;
   );
   background: -webkit-linear-gradient($main, $second);
   border-radius: 10px;
-  // border-bottom: 3px inset black;
   z-index: 2;
 }
 
+// ellipse on bottom of base
 .bottom-ellipse {
   width: $lampWidth;
   height: $bottomHeight / 4;

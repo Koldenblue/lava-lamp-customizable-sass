@@ -1,3 +1,17 @@
+.lava-2 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #fd1d1d 53%, #b43a7a 100%);
+  width: 40px;
+  height: 50px;
+  top: 30%;
+  left: 40%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 20;
+  box-shadow: 0px 0px 50px red;
+  border-radius: 5000px;
+}
+
 .lava-1 {
   position: absolute;
   background: #fcb045;
@@ -71,27 +85,39 @@
 }
 
 .lamp-shadow {
-  width: 40px;
+  width: 20px;
   height: 400px;
   position: absolute;
   left: 50%;
-  transform: skewX(8.5deg) translateX(75%);
+  transform: skewX(8.5deg) translateX(260%);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
-  box-shadow: 0px 0px 100px #9b50d2;
+  box-shadow: 0px 0px 75px #9b50d2;
+}
+
+.lamp-shadow-mid {
+  position: absolute;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-50%);
+  height: 400px;
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -400;
 }
 
 .lamp-shadow-2 {
-  width: 40px;
+  width: 20px;
   height: 400px;
   position: absolute;
   left: 50%;
-  transform: skewX(-8.5deg) translateX(-175%);
+  transform: skewX(-8.5deg) translateX(-360%);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
-  box-shadow: 0px 0px 100px #9b50d2;
+  box-shadow: 0px 0px 75px #9b50d2;
 }
 
 .lamp-translucent-cover {
@@ -174,14 +200,28 @@
 
 body {
   background-color: black;
+  overflow-x: hidden;
+}
+
+.jumbotron, .bg-text {
+  font-family: "Modak", cursive;
 }
 
 .jumbotron {
-  font-family: "Modak", cursive;
   background-image: url("../img/abstract-wax.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 1px solid indigo;
+  border-bottom: 5px outset indigo;
+}
+
+.bg-text {
+  font-size: 15rem;
+  left: 50%;
+  position: absolute;
+  top: 40rem;
+  z-index: -5000;
+  transform: translateY(-50%) translateX(-50%);
+  display: ruby;
 }
 
 .jumbotron h1, .jumbotron p {
