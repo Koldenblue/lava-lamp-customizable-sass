@@ -1,11 +1,34 @@
 .lava-1 {
   position: absolute;
-  background-color: orange;
-  border-radius: 1000px;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #fd1d1d 53%, #b43a7a 100%);
   padding: 60px;
-  top: 200px;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 20;
+  border-radius: 5000px;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .lava-1 {
+    animation: lava-1 infinite 5s ease-in-out;
+  }
+}
+@keyframes lava-1 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
+  }
+  50% {
+    top: 60%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
+  }
+}
 .top-cap-ellipse {
   background: #fd1d1d;
   height: 10px;
@@ -26,6 +49,7 @@
   background: linear-gradient(108deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
   left: 50%;
   transform: translateX(-50%);
+  z-index: -2;
   position: relative;
   shape-outside: polygon(35% 0%, 65% 0%, 70% 100%, 30% 100%);
   clip-path: polygon(35% 0%, 65% 0%, 70% 100%, 30% 100%);
@@ -40,7 +64,7 @@
   margin-bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: -1;
   shape-outside: ellipse(20% 40%);
   clip-path: ellipse(20% 40%);
 }
@@ -52,7 +76,8 @@
   left: 50%;
   transform: translateX(-50%);
   background: #ae01be;
-  background: linear-gradient(90deg, rgba(174, 1, 190, 0.5) 0%, rgba(220, 90, 220, 0.5) 50%, rgba(174, 1, 190, 0.5) 100%);
+  z-index: 500;
+  background: linear-gradient(90deg, rgba(174, 1, 190, 0.5) 0%, rgba(180, 90, 180, 0.4) 50%, rgba(174, 1, 190, 0.5) 100%);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
   clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
 }
@@ -63,6 +88,7 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 20;
   background: -webkit-linear-gradient(rgba(174, 1, 190, 0.5), rgba(255, 121, 255, 0.5));
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
   clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);

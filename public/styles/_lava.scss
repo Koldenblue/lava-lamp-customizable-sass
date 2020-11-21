@@ -4,13 +4,44 @@ $second: rgb(174, 1, 190);
 $liquid: rgba(174, 1, 190, 0.5);
 $bottomHeight: 100px;
 $lampWidth: 200px;
+$lava-1-ellipse: 90% 10%;
 
 .lava-1 {
   position: absolute;
-  background-color: orange;
-  border-radius: 1000px;
+  background: rgb(252,176,69);
+  background: linear-gradient(0deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 53%, rgba(180,58,122,1) 100%); 
   padding: 60px;
-  top: 200px;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 20;
+  border-radius: 5000px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lava-1 {
+    animation: lava-1 infinite 5s ease-in-out;
+  }
+}
+@keyframes lava-1 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
+    // shape-outside: ellipse($lava-1-ellipse);
+    // clip-path: ellipse($lava-1-ellipse);
+  }
+  50% {
+    top: 60%;
+    transform: translateX(-50%) translateY(-50%);
+    // shape-outside: ellipse($lava-1-ellipse);
+    // clip-path: ellipse($lava-1-ellipse);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
+    // shape-outside: ellipse($lava-1-ellipse);
+    // clip-path: ellipse($lava-1-ellipse);
+  }
 }
 
 .top-cap-ellipse {
@@ -33,6 +64,7 @@ $lampWidth: 200px;
   background: linear-gradient(108deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
   left: 50%;
   transform: translateX(-50%);
+  z-index: -2;
   position: relative;
   shape-outside: polygon(
     35% 0%,
@@ -57,7 +89,7 @@ $lampWidth: 200px;
   margin-bottom: -($bottomHeight / 20);
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: -1;
   shape-outside: ellipse(20% 40%);
   clip-path: ellipse(20% 40%);
 }
@@ -71,7 +103,8 @@ $lampWidth: 200px;
   left: 50%;
   transform: translateX(-50%);
   background: rgb(174,1,190);
-  background: linear-gradient(90deg, rgba(174,1,190,0.5) 0%, rgba(220,90,220,0.5) 50%, rgba(174,1,190,0.5) 100%); 
+  z-index: 500;
+  background: linear-gradient(90deg, rgba(174,1,190,0.5) 0%, rgba(180,90,180,0.4) 50%, rgba(174,1,190,0.5) 100%); 
   shape-outside: polygon(
     0% 100%,
     100% 100%,
@@ -92,6 +125,7 @@ $lampWidth: 200px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 20;
   background: -webkit-linear-gradient($liquid, adjust-color($liquid, $red: 120, $blue: 120, $green: 120));
   shape-outside: polygon(
     0% 100%,
