@@ -1,4 +1,68 @@
+.lamp-cap {
+  width: 200px;
+  height: 66.6666666667px;
+  background: -webkit-linear-gradient(indigo, #7d32b4);
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  shape-outside: polygon(35% 0%, 65% 0%, 70% 100%, 30% 100%);
+  clip-path: polygon(35% 0%, 65% 0%, 70% 100%, 30% 100%);
+}
+
+.cap-ellipse {
+  background-color: #7d32b4;
+  height: 10px;
+  width: 200px;
+  position: relative;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  shape-outside: ellipse(20% 40%);
+  clip-path: ellipse(20% 40%);
+}
+
+.lamp {
+  width: 200px;
+  height: 400px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background: -webkit-linear-gradient(rgba(174, 1, 190, 0.5), rgba(255, 121, 255, 0.5));
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+}
+
+.middle-ellipse {
+  background-color: rgba(174, 1, 190, 0.5);
+  height: 10px;
+  width: 200px;
+  position: relative;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  shape-outside: ellipse(50% 50%);
+  clip-path: ellipse(50% 50%);
+}
+
 .lamp-top {
+  width: 200px;
+  height: 130px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background: -webkit-linear-gradient(#ae01be, indigo);
+  border-radius: 7px 7px 10px 10px;
+  border-top: 3px inset black;
+  shape-outside: polygon(0% 0%, 100% 0, 80% 100%, 20% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 80% 100%, 20% 100%);
+  z-index: 2;
+}
+
+.lamp-bottom {
   width: 200px;
   height: 100px;
   position: relative;
@@ -8,7 +72,19 @@
   clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
   background: -webkit-linear-gradient(indigo, #ae01be);
   border-radius: 10px;
-  border-bottom: 3px inset black;
+  z-index: 2;
+}
+
+.bottom-ellipse {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  left: 50%;
+  z-index: 1;
+  transform: translateY(-60%) translateX(-50%);
+  shape-outside: ellipse(50% 50%);
+  clip-path: ellipse(50% 50%);
+  background: #ae01be;
 }
 
 .jumbotron {
