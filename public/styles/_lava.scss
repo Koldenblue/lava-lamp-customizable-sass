@@ -3,19 +3,34 @@ $main: indigo;
 $second: rgb(174, 1, 190);
 $liquid: rgba(174, 1, 190, 0.5);
 $bottomHeight: 100px;
-$lampSideBorder: 5px solid adjust-color($second, $red: 10, $blue: 10);
 $lampWidth: 200px;
 
 .lava-1 {
-
+  position: absolute;
+  background-color: orange;
+  border-radius: 1000px;
+  padding: 60px;
+  top: 200px;
 }
 
-
+.top-cap-ellipse {
+  background: rgba(253,29,29,1);
+  height: $bottomHeight / 10;
+  width: $lampWidth;
+  position: relative;
+  margin-bottom: -($bottomHeight / 20);
+  left: 50%;
+  transform: translateX(-50%);
+  shape-outside: ellipse(15% 40%);
+  clip-path: ellipse(15% 40%);
+}
 
 .lamp-cap {
   width: $lampWidth;
   height: $bottomHeight / 1.5;
-  background: -webkit-linear-gradient($main, adjust-color($main, $red: 50, $blue: 50, $green: 50));
+  background: -webkit-linear-gradient(15deg, $main, adjust-color($main, $red: 50, $blue: 50, $green: 50));
+  background: rgb(131,58,180);
+  background: linear-gradient(108deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
   left: 50%;
   transform: translateX(-50%);
   position: relative;
@@ -45,6 +60,30 @@ $lampWidth: 200px;
   z-index: 100;
   shape-outside: ellipse(20% 40%);
   clip-path: ellipse(20% 40%);
+}
+
+// absolute position, same as .lamp div, the only difference is the color and color orientation.
+// 50% transparent so that the color of the div behind it is seen as well.
+.lamp-translucent-cover {
+  width: $lampWidth;
+  height: $bottomHeight * 4;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(174,1,190);
+  background: linear-gradient(90deg, rgba(174,1,190,0.5) 0%, rgba(220,90,220,0.5) 50%, rgba(174,1,190,0.5) 100%); 
+  shape-outside: polygon(
+    0% 100%,
+    100% 100%,
+    70% 0%,
+    30% 0%,
+  );
+  clip-path: polygon(
+    0% 100%,
+    100% 100%,
+    70% 0%,
+    30% 0%,
+  );
 }
 
 .lamp {

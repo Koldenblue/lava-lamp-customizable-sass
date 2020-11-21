@@ -3,7 +3,9 @@ $main: indigo;
 $text: rgb(215, 250, 245);
 $second: rgb(174, 1, 190);
 
-
+body {
+  background-color: black;
+}
 .jumbotron {
   font-family: 'Modak', cursive;
   // background-attachment: fixed;

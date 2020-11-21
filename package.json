@@ -10,7 +10,6 @@
     "watch-sass": "sass.bat --watch public/styles/input.scss public/styles/style.css"
   },
   "author": "Kevin Miller",
-  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
   }

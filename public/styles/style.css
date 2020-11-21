@@ -1,7 +1,29 @@
+.lava-1 {
+  position: absolute;
+  background-color: orange;
+  border-radius: 1000px;
+  padding: 60px;
+  top: 200px;
+}
+
+.top-cap-ellipse {
+  background: #fd1d1d;
+  height: 10px;
+  width: 200px;
+  position: relative;
+  margin-bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  shape-outside: ellipse(15% 40%);
+  clip-path: ellipse(15% 40%);
+}
+
 .lamp-cap {
   width: 200px;
   height: 66.6666666667px;
-  background: -webkit-linear-gradient(indigo, #7d32b4);
+  background: -webkit-linear-gradient(15deg, indigo, #7d32b4);
+  background: #833ab4;
+  background: linear-gradient(108deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
   left: 50%;
   transform: translateX(-50%);
   position: relative;
@@ -21,6 +43,18 @@
   z-index: 100;
   shape-outside: ellipse(20% 40%);
   clip-path: ellipse(20% 40%);
+}
+
+.lamp-translucent-cover {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ae01be;
+  background: linear-gradient(90deg, rgba(174, 1, 190, 0.5) 0%, rgba(220, 90, 220, 0.5) 50%, rgba(174, 1, 190, 0.5) 100%);
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
 }
 
 .lamp {
@@ -85,6 +119,10 @@
   shape-outside: ellipse(50% 50%);
   clip-path: ellipse(50% 50%);
   background: #ae01be;
+}
+
+body {
+  background-color: black;
 }
 
 .jumbotron {
