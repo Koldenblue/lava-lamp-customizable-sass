@@ -28,6 +28,28 @@ body {
   display: ruby;
 }
 
+@media screen and (max-width: 1050px) {
+  .bg-text {
+    font-size: 13rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .bg-text {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .bg-text {
+    font-size: 7rem;
+  }
+}
+@media screen and (max-width: 492px) {
+  .bg-text {
+    font-size: 6rem;
+  }
+}
+
+
 .jumbotron {
   h1, p {
     color: $text;
