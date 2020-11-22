@@ -3,9 +3,9 @@
 /* ========= Customizable lamp parameters =========== */
 $main: rgb(0, 43, 21);
 $second: rgb(95, 112, 0);
-$lavaTop: rgba(180,58,122,1);
-$lavaMid: rgba(253,29,29,1);
-$lavaBottom: rgba(252,176,69,1);
+$lavaTop: rgba(180,58,122,1);            // color of the wax lava
+$lavaMid: rgba(253,29,29,1);             // color of the wax lava
+$lavaBottom: rgba(252,176,69,1);         // color of the wax lava
 $lavaShadowColor: 0px 0px 100px rgb(255, 153, 0);
 $bottomHeight: 100px;
 $lampWidth: 200px;
@@ -13,13 +13,12 @@ $lampBaseDarker: rgb(32, 32, 32);
 $lampBase: rgb(150,150,150);
 $lavaMidCap: $lampBase;
 $lavaBottomCap: $lampBaseDarker;
+$liquid: adjust-color($second, $alpha: -0.8); // adjust transparency of lamp
+$whitenShadow: 150;  // lamp glow
 /* =================================================== */
 
 $lavaCap:adjust-color($lavaMidCap, $red: -43, $green: 57, $blue: 10);
-$liquid: adjust-color($second, $alpha: -0.5);
 $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
-$lava-2-ellipse: 30% 45%;
-$whitenShadow: 80;
 @mixin lavaColor() {
   background: $lavaBottom;
   background: linear-gradient(0deg, $lavaBottom 0%, $lavaMid 53%, $lavaTop 100%); 
@@ -271,12 +270,12 @@ $whitenShadow: 80;
 
   // right side shadow
   .lamp-shadow {
-    width: $lampWidth / 10;
+    width: $lampWidth / 15;
     height: $bottomHeight * 4;
     position: absolute;
     left: 50%;
     // calculating the skew angle: since the clip path is at 30% width of the lamp, use that and height of lamp to calculate angle
-    transform: skewX( math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) translateX(260%);
+    transform: skewX( math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) translateX(430%);
     z-index: -500;
     background-color: rgba(255,255,255 , 0.0);
     shape-outside: polygon(
@@ -285,7 +284,7 @@ $whitenShadow: 80;
       70% 0%,
       30% 0%,
     );
-    box-shadow: 0px 0px 75px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
+    box-shadow: 0px 0px 60px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
   }
 
   // a polygon to cover the gap between the two shadow boxes on the side
@@ -317,11 +316,11 @@ $whitenShadow: 80;
 
   // left side shadow
   .lamp-shadow-2 {
-    width: $lampWidth / 10;
+    width: $lampWidth / 15;
     height: $bottomHeight * 4;
     position: absolute;
     left: 50%;
-    transform: skewX( -(math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) ) translateX(-360%);
+    transform: skewX( -(math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) ) translateX(-530%);
     // transform: skewX(-8.5deg) translateX(-360%);
     z-index: -500;
     background-color: rgba(255,255,255 , 0.0);
@@ -331,7 +330,7 @@ $whitenShadow: 80;
       70% 0%,
       30% 0%,
     );
-    box-shadow: 0px 0px 75px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
+    box-shadow: 0px 0px 60px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
   }
 
   // absolute position, same as .lamp div, the only difference is the color and color orientation.

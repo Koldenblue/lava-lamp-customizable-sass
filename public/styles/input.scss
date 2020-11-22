@@ -76,6 +76,10 @@ body {
   background-color: $main;
   box-shadow: 3px 0 3px black;
 }
-.navbar a {
+.nav-link {
   color: $text;
+}
+
+.nav-active {
+  color: adjust-color($text, $red: -80, $green: -80, $blue: 20)
 }
