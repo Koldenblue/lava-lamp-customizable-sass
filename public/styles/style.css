@@ -1,3 +1,5 @@
+/* ========= Customizable lamp parameters =========== */
+/* =================================================== */
 .lava-2 {
   position: absolute;
   background: #fcb045;
@@ -8,7 +10,7 @@
   left: 40%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 20;
-  box-shadow: 0px 0px 50px red;
+  box-shadow: 0px 0px 100px red;
   border-radius: 5000px;
 }
 
@@ -16,7 +18,7 @@
   position: absolute;
   background: #fcb045;
   background: linear-gradient(0deg, #fcb045 0%, #fd1d1d 53%, #b43a7a 100%);
-  padding: 60px;
+  padding: 55.5555555556px;
   top: 0%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -89,7 +91,7 @@
   height: 400px;
   position: absolute;
   left: 50%;
-  transform: skewX(8.5deg) translateX(260%);
+  transform: skewX(8.5307656099deg) translateX(260%);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
@@ -113,7 +115,7 @@
   height: 400px;
   position: absolute;
   left: 50%;
-  transform: skewX(-8.5deg) translateX(-360%);
+  transform: skewX(-8.5307656099deg) translateX(-360%);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
@@ -128,7 +130,7 @@
   transform: translateX(-50%);
   background: #ae01be;
   z-index: 500;
-  background: linear-gradient(90deg, rgba(174, 1, 190, 0.5) 0%, rgba(180, 90, 180, 0.4) 50%, rgba(174, 1, 190, 0.5) 100%);
+  background: linear-gradient(90deg, rgba(174, 1, 190, 0.5) 0%, rgba(180, 90, 190, 0.4) 50%, rgba(174, 1, 190, 0.5) 100%);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
   clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
 }

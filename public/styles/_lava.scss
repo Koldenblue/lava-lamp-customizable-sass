@@ -1,16 +1,33 @@
 // stylesheet for animated lava lamp
+@use 'sass:math';
+/* ========= Customizable lamp parameters =========== */
 $main: indigo;
-$second: rgb(174, 1, 190);
-$liquid: rgba(174, 1, 190, 0.5);
+$second: rgba(174, 1, 190, 1);
+$lavaTop:rgba(131,58,180,1);
+$lavaMid: rgba(253,29,29,1);
+$lavaBottom: rgba(252,176,69,1);
+$lavaShadowColor: 0px 0px 100px rgb(255, 0, 0);
 $bottomHeight: 100px;
 $lampWidth: 200px;
+/* =================================================== */
+
+$liquid: adjust-color($second, $alpha: -0.5);
+$liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
 $lava-1-ellipse: 90% 10%;
 $whitenShadow: 80;
+@mixin lavaColor() {
+  background: $lavaBottom;
+  background: linear-gradient(0deg, $lavaBottom 0%, $lavaMid 53%, rgba(180,58,122,1) 100%); 
+}
+@mixin topCap() {
+  background: $lavaTop;
+  background: linear-gradient(108deg, $lavaTop 0%, $lavaMid 50%, $lavaBottom 100%); 
+}
+
 
 .lava-2 {
   position: absolute;
-  background: rgb(252,176,69);
-  background: linear-gradient(0deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 53%, rgba(180,58,122,1) 100%); 
+  @include lavaColor();
   // padding-top: $lampWidth / 5.0;
   // padding-right: $lampWidth / 5.5;
   // padding-bottom: $lampWidth / 5;
@@ -21,7 +38,7 @@ $whitenShadow: 80;
   left: 40%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 20;
-  box-shadow: 0px 0px 50px rgb(255, 0, 0);
+  box-shadow: $lavaShadowColor;
   border-radius: 5000px;
   // shape-outside: ellipse(30% 45%);
   // clip-path: ellipse(30% 45%);
@@ -30,14 +47,13 @@ $whitenShadow: 80;
 // lava in the lamp
 .lava-1 {
   position: absolute;
-  background: rgb(252,176,69);
-  background: linear-gradient(0deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 53%, rgba(180,58,122,1) 100%); 
-  padding: 60px;
+  @include lavaColor();
+  padding: $lampWidth / 3.6;
   top: 0%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 20;
-  box-shadow: 0px 0px 100px rgb(255, 0, 0);
+  box-shadow: $lavaShadowColor;
   border-radius: 5000px;
 }
 
@@ -69,7 +85,7 @@ $whitenShadow: 80;
 
 // ellipse on top of cap
 .top-cap-ellipse {
-  background: rgba(253,29,29,1);
+  background: $lavaMid;
   height: $bottomHeight / 10;
   width: $lampWidth;
   position: relative;
@@ -84,8 +100,7 @@ $whitenShadow: 80;
   width: $lampWidth;
   height: $bottomHeight / 1.5;
   background: -webkit-linear-gradient(15deg, $main, adjust-color($main, $red: 50, $blue: 50, $green: 50));
-  background: rgb(131,58,180);
-  background: linear-gradient(108deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+  @include topCap();
   left: 50%;
   transform: translateX(-50%);
   z-index: -2;
@@ -125,7 +140,8 @@ $whitenShadow: 80;
   height: $bottomHeight * 4;
   position: absolute;
   left: 50%;
-  transform: skewX(8.5deg) translateX(260%);
+  // calculating the skew angle: since the clip path is at 30% width of the lamp, use that and height of lamp to calculate angle
+  transform: skewX( math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) translateX(260%);
   z-index: -500;
   background-color: rgba(255,255,255 , 0.0);
   shape-outside: polygon(
@@ -156,7 +172,7 @@ $whitenShadow: 80;
     70% 0%,
     30% 0%,
     );
-  background-color:  rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   
   z-index: -400;
   // border-left: $bottomHeight solid transparent;
@@ -170,7 +186,8 @@ $whitenShadow: 80;
   height: $bottomHeight * 4;
   position: absolute;
   left: 50%;
-  transform: skewX(-8.5deg) translateX(-360%);
+  transform: skewX( -(math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) ) translateX(-360%);
+  // transform: skewX(-8.5deg) translateX(-360%);
   z-index: -500;
   background-color: rgba(255,255,255 , 0.0);
   shape-outside: polygon(
@@ -192,9 +209,9 @@ $whitenShadow: 80;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background: rgb(174,1,190);
+  background: $second;
   z-index: 500;
-  background: linear-gradient(90deg, rgba(174,1,190,0.5) 0%, rgba(180,90,180,0.4) 50%, rgba(174,1,190,0.5) 100%); 
+  background: linear-gradient(90deg, $liquid 0%, $liquidGradient 50%, $liquid 100%); 
   shape-outside: polygon(
     0% 100%,
     100% 100%,
