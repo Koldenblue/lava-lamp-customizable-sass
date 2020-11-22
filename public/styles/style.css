@@ -225,7 +225,7 @@
   height: 320px;
   position: absolute;
   left: 50%;
-  transform: skewX(10.6196552762deg) translateX(430%);
+  transform: skewX(10.6196552762deg) translateX(57.1951219512px);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
@@ -247,7 +247,7 @@
   height: 320px;
   position: absolute;
   left: 50%;
-  transform: skewX(-10.6196552762deg) translateX(-530%);
+  transform: skewX(-10.6196552762deg) translateX(-69.8046875px);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
@@ -553,7 +553,7 @@
   height: 400px;
   position: absolute;
   left: 50%;
-  transform: skewX(8.5307656099deg) translateX(430%);
+  transform: skewX(8.5307656099deg) translateX(57.1951219512px);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
@@ -575,7 +575,7 @@
   height: 400px;
   position: absolute;
   left: 50%;
-  transform: skewX(-8.5307656099deg) translateX(-530%);
+  transform: skewX(-8.5307656099deg) translateX(-69.8046875px);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
@@ -881,7 +881,7 @@
   height: 400px;
   position: absolute;
   left: 50%;
-  transform: skewX(8.5307656099deg) translateX(430%);
+  transform: skewX(8.5307656099deg) translateX(57.1951219512px);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
@@ -903,7 +903,7 @@
   height: 400px;
   position: absolute;
   left: 50%;
-  transform: skewX(-8.5307656099deg) translateX(-530%);
+  transform: skewX(-8.5307656099deg) translateX(-69.8046875px);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);

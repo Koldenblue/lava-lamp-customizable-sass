@@ -15,6 +15,7 @@ $lavaMidCap: $lampBase;
 $lavaBottomCap: $lampBaseDarker;
 $liquid: adjust-color($second, $alpha: -0.8); // adjust transparency of lamp
 $whitenShadow: 150;  // lamp glow
+$leftPosition: 50%;  // adjusting left position will also require lamp shadow and lamp-shadow-2 translateX to be adjusted
 /* =================================================== */
 
 $lavaCap:adjust-color($lavaMidCap, $red: -43, $green: 57, $blue: 10);
@@ -224,8 +225,8 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     width: $lampWidth;
     position: relative;
     margin-bottom: -($bottomHeight / 20);
-    left: 50%;
-    transform: translateX(-50%);
+    left: $leftPosition;
+    transform: translateX(-$leftPosition);
     shape-outside: ellipse(15% 40%);
     clip-path: ellipse(15% 40%);
   }
@@ -235,8 +236,8 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     height: $bottomHeight / 1.5;
     background: -webkit-linear-gradient(15deg, $main, adjust-color($main, $red: 50, $blue: 50, $green: 50));
     @include topCap();
-    left: 50%;
-    transform: translateX(-50%);
+    left: $leftPosition;
+    transform: translateX(-$leftPosition);
     z-index: -2;
     position: relative;
     shape-outside: polygon(
@@ -261,8 +262,8 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     position: relative;
     margin-top: -($bottomHeight / 20);
     margin-bottom: -($bottomHeight / 20);
-    left: 50%;
-    transform: translateX(-50%);
+    left: $leftPosition;
+    transform: translateX(-$leftPosition);
     z-index: -1;
     shape-outside: ellipse(20% 40%);
     clip-path: ellipse(20% 40%);
@@ -273,9 +274,10 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     width: $lampWidth / 15;
     height: $bottomHeight * 4;
     position: absolute;
-    left: 50%;
+    left: $leftPosition;
     // calculating the skew angle: since the clip path is at 30% width of the lamp, use that and height of lamp to calculate angle
-    transform: skewX( math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) translateX(430%);
+    // could also be 530% and negative 430% for the transformX shadows
+    transform: skewX( math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) translateX($lampWidth * .285 + $lampWidth / 1025);
     z-index: -500;
     background-color: rgba(255,255,255 , 0.0);
     shape-outside: polygon(
@@ -290,9 +292,9 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
   // a polygon to cover the gap between the two shadow boxes on the side
   .lamp-shadow-mid {
     position: absolute;
-    left: 50%;
+    left: $leftPosition;
     width: $lampWidth;
-    transform: translateX(-50%);
+    transform: translateX(-$leftPosition);
     height: ($bottomHeight * 4);
     shape-outside: polygon(
       0% 100%,
@@ -319,8 +321,8 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     width: $lampWidth / 15;
     height: $bottomHeight * 4;
     position: absolute;
-    left: 50%;
-    transform: skewX( -(math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) ) translateX(-530%);
+    left: $leftPosition;
+    transform: skewX( -(math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) ) translateX((-$lampWidth * .35 + $lampWidth / 1024));
     // transform: skewX(-8.5deg) translateX(-360%);
     z-index: -500;
     background-color: rgba(255,255,255 , 0.0);
@@ -341,8 +343,8 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     width: $lampWidth;
     height: $bottomHeight * 4;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: $leftPosition;
+    transform: translateX(-$leftPosition);
     background: $second;
     z-index: 500;
     background: linear-gradient(90deg, $liquid 0%, $liquidGradient 50%, $liquid 100%); 
@@ -365,8 +367,8 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     width: $lampWidth;
     height: $bottomHeight * 4;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    left: $leftPosition;
+    transform: translateX(-$leftPosition);
     z-index: 20;
     background: -webkit-linear-gradient($liquid, adjust-color($liquid, $red: 120, $blue: 120, $green: 120));
     shape-outside: polygon(
@@ -391,8 +393,8 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     position: relative;
     margin-top: -($bottomHeight / 20);
     margin-bottom: -($bottomHeight / 20);
-    left: 50%;
-    transform: translateX(-50%);
+    left: $leftPosition;
+    transform: translateX(-$leftPosition);
     z-index: 10;
     shape-outside: ellipse(50% 50%);
     clip-path: ellipse(50% 50%);
@@ -403,8 +405,8 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     width: $lampWidth;
     height: $bottomHeight * 1.3;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    left: $leftPosition;
+    transform: translateX(-$leftPosition);
     background: -webkit-linear-gradient($lampBase, $lampBaseDarker);
     border-radius: 7px 7px 10px 10px;
     border-top: 3px inset black;
@@ -428,8 +430,8 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     width: $lampWidth;
     height: $bottomHeight;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    left: $leftPosition;
+    transform: translateX(-$leftPosition);
     shape-outside: polygon(
       20% 0,
       80% 0,
@@ -452,9 +454,9 @@ $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
     width: $lampWidth;
     height: $bottomHeight / 4;
     position: relative;
-    left: 50%;
+    left: $leftPosition;
     z-index: 1;
-    transform: translateY(-60%) translateX(-50%);
+    transform: translateY(-60%) translateX(-$leftPosition);
     shape-outside: ellipse(50% 50%);
     clip-path: ellipse(50% 50%);
     background: $lampBase;
