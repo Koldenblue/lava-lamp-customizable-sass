@@ -3,7 +3,7 @@
 /* ========= Customizable lamp parameters =========== */
 $main: indigo;
 $second: rgba(174, 1, 190, 1);
-$lavaTop:rgba(131,58,180,1);
+$lavaTop: rgba(180,58,122,1);
 $lavaMid: rgba(253,29,29,1);
 $lavaBottom: rgba(252,176,69,1);
 $lavaShadowColor: 0px 0px 100px rgb(255, 0, 0);
@@ -11,317 +11,449 @@ $bottomHeight: 100px;
 $lampWidth: 200px;
 /* =================================================== */
 
+$lavaCap:adjust-color($second, $red: -43, $green: 57, $blue: 10);
 $liquid: adjust-color($second, $alpha: -0.5);
 $liquidGradient: adjust-color($liquid, $red: 6, $green: 89, $alpha: -0.1);
-$lava-1-ellipse: 90% 10%;
+$lava-2-ellipse: 30% 45%;
 $whitenShadow: 80;
 @mixin lavaColor() {
   background: $lavaBottom;
-  background: linear-gradient(0deg, $lavaBottom 0%, $lavaMid 53%, rgba(180,58,122,1) 100%); 
+  background: linear-gradient(0deg, $lavaBottom 0%, $lavaMid 53%, $lavaTop 100%); 
 }
 @mixin topCap() {
-  background: $lavaTop;
-  background: linear-gradient(108deg, $lavaTop 0%, $lavaMid 50%, $lavaBottom 100%); 
+  background: $lavaCap;
+  background: linear-gradient(108deg, $lavaCap 0%, $lavaMid 50%, $lavaBottom 100%); 
 }
 
+// the section class name, .purple-lamp, can be changed to a different class name in order to create new separate lamp sections
+.purple-lamp {
+  .lava-3 {
+    position: absolute;
+    @include lavaColor();
+    width: $lampWidth / 4;
+    height: $lampWidth / 4;
+    top: 20%;
+    left: 60%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 20;
+    box-shadow: $lavaShadowColor;
+    border-radius: 5000px;
+    shape-outside: ellipse(40% 34%);
+    clip-path: ellipse(40% 34%);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .lava-3 {
+      animation: lava-3 infinite 20s ease-in-out;
+    }
+  }
+  @keyframes lava-3 {
+    0% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 20%;  
+      shape-outside: ellipse(40% 34%);
+      clip-path: ellipse(40% 34%);
+    }
+    50% {
+      top: 15%;
+      transform: translateX(-50%) translateY(-50%);
+      shape-outside: ellipse(44% 45%);
+      clip-path: ellipse(44% 45%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 20%;
+      shape-outside: ellipse(40% 34%);
+      clip-path: ellipse(40% 34%);
+    }
+  }
 
-.lava-2 {
-  position: absolute;
-  @include lavaColor();
-  // padding-top: $lampWidth / 5.0;
-  // padding-right: $lampWidth / 5.5;
-  // padding-bottom: $lampWidth / 5;
-  // padding-left: $lampWidth / 5;
-  width: $lampWidth / 5;
-  height: $lampWidth / 4;
-  top: 30%;
-  left: 40%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 20;
-  box-shadow: $lavaShadowColor;
-  border-radius: 5000px;
-  // shape-outside: ellipse(30% 45%);
-  // clip-path: ellipse(30% 45%);
-}
+  .lava-2 {
+    position: absolute;
+    @include lavaColor();
+    width: $lampWidth / 2;
+    height: $lampWidth / 2;
+    top: 30%;
+    left: 40%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 19;
+    box-shadow: $lavaShadowColor;
+    border-radius: 5000px;
+    shape-outside: ellipse(30% 45%);
+    clip-path: ellipse(30% 45%);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .lava-2 {
+      animation: lava-2 infinite 20s ease-in-out;
+    }
+  }
+  @keyframes lava-2 {
+    0% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 30%;  
+      shape-outside: ellipse(30% 45%);
+      clip-path: ellipse(30% 45%);
+    }
+    50% {
+      top: 45%;
+      transform: translateX(-50%) translateY(-50%);
+      shape-outside: ellipse(40% 45%);
+      clip-path: ellipse(40% 45%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 30%;
+      shape-outside: ellipse(30% 45%);
+      clip-path: ellipse(30% 45%);
+    }
+  }
 
-// lava in the lamp
-.lava-1 {
-  position: absolute;
-  @include lavaColor();
-  padding: $lampWidth / 3.6;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 20;
-  box-shadow: $lavaShadowColor;
-  border-radius: 5000px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
+  // lava in the lamp
   .lava-1 {
-    animation: lava-1 infinite 5s ease-in-out;
-  }
-}
-@keyframes lava-1 {
-  0% {
+    position: absolute;
+    @include lavaColor();
+    padding: $lampWidth / 3.6;
+    top: 0%;
+    left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    top: 55%;
-    // shape-outside: ellipse($lava-1-ellipse);
-    // clip-path: ellipse($lava-1-ellipse);
+    z-index: 21;
+    box-shadow: $lavaShadowColor;
+    border-radius: 5000px;
   }
-  50% {
-    top: 60%;
+
+  @media (prefers-reduced-motion: no-preference) {
+    .lava-1 {
+      animation: lava-1 infinite 20s ease-in-out;
+    }
+  }
+  @keyframes lava-1 {
+    0% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 55%;
+    }
+    50% {
+      top: 60%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 55%;
+    }
+  }
+
+  .lava-4 {
+    position: absolute;
+    @include lavaColor();
+    padding: $lampWidth / 3.6;
+    top: 0%;
+    left: 72%;
     transform: translateX(-50%) translateY(-50%);
-    // shape-outside: ellipse($lava-1-ellipse);
-    // clip-path: ellipse($lava-1-ellipse);
+    z-index: 19;
+    box-shadow: $lavaShadowColor;
+    border-radius: 5000px;
+    shape-outside: ellipse(25% 45%);
+    clip-path: ellipse(25% 45%);
   }
-  100% {
+
+  @media (prefers-reduced-motion: no-preference) {
+    .lava-4 {
+      animation: lava-4 infinite 20s ease-in-out;
+    }
+  }
+  @keyframes lava-4 {
+    0% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 90%;
+      shape-outside: ellipse(25% 45%);
+      clip-path: ellipse(25% 45%);
+    }
+    50% {
+      top: 100%;
+      transform: translateX(-50%) translateY(-50%);
+      shape-outside: ellipse(40% 35%);
+      clip-path: ellipse(40% 35%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 90%;
+      shape-outside: ellipse(25% 45%);
+      clip-path: ellipse(25% 45%);
+    }
+  }
+
+  .lava-0 {
+    position: absolute;
+    @include lavaColor();
+    padding: $lampWidth / 1.8;
+    top: 0%;
+    left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    top: 55%;
-    // shape-outside: ellipse($lava-1-ellipse);
-    // clip-path: ellipse($lava-1-ellipse);
+    z-index: 22;
+    box-shadow: $lavaShadowColor;
+    border-radius: 5000px;
+    shape-outside: ellipse(45% 25%);
+    clip-path: ellipse(45% 25%);
   }
-}
 
-// ellipse on top of cap
-.top-cap-ellipse {
-  background: $lavaMid;
-  height: $bottomHeight / 10;
-  width: $lampWidth;
-  position: relative;
-  margin-bottom: -($bottomHeight / 20);
-  left: 50%;
-  transform: translateX(-50%);
-  shape-outside: ellipse(15% 40%);
-  clip-path: ellipse(15% 40%);
-}
+  @media (prefers-reduced-motion: no-preference) {
+    .lava-0 {
+      animation: lava-0 infinite 20s ease-in-out;
+    }
+  }
+  @keyframes lava-0 {
+    0% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 107%;
+    }
+    50% {
+      top: 102%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%);
+      top: 107%;
+    }
+  }
 
-.lamp-cap {
-  width: $lampWidth;
-  height: $bottomHeight / 1.5;
-  background: -webkit-linear-gradient(15deg, $main, adjust-color($main, $red: 50, $blue: 50, $green: 50));
-  @include topCap();
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -2;
-  position: relative;
-  shape-outside: polygon(
-    35% 0%,
-    65% 0%,
-    70% 100%,
-    30% 100%,
-  );
-  clip-path: polygon(
-    35% 0%,
-    65% 0%,
-    70% 100%,
-    30% 100%,
-  );
-} 
+  // ellipse on top of cap
+  .top-cap-ellipse {
+    background: $lavaMid;
+    height: $bottomHeight / 10;
+    width: $lampWidth;
+    position: relative;
+    margin-bottom: -($bottomHeight / 20);
+    left: 50%;
+    transform: translateX(-50%);
+    shape-outside: ellipse(15% 40%);
+    clip-path: ellipse(15% 40%);
+  }
 
-// ellipse on bottom of cap
-.cap-ellipse {
-  background-color: adjust-color($main, $red: 50, $blue: 50, $green: 50);
-  height: $bottomHeight / 10;
-  width: $lampWidth;
-  position: relative;
-  margin-top: -($bottomHeight / 20);
-  margin-bottom: -($bottomHeight / 20);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-  shape-outside: ellipse(20% 40%);
-  clip-path: ellipse(20% 40%);
-}
-
-// right side shadow
-.lamp-shadow {
-  width: $lampWidth / 10;
-  height: $bottomHeight * 4;
-  position: absolute;
-  left: 50%;
-  // calculating the skew angle: since the clip path is at 30% width of the lamp, use that and height of lamp to calculate angle
-  transform: skewX( math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) translateX(260%);
-  z-index: -500;
-  background-color: rgba(255,255,255 , 0.0);
-  shape-outside: polygon(
-    0% 100%,
-    100% 100%,
-    70% 0%,
-    30% 0%,
-  );
-  box-shadow: 0px 0px 75px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
-}
-
-// a polygon to cover the gap between the two shadow boxes on the side
-.lamp-shadow-mid {
-  position: absolute;
-  left: 50%;
-  width: $lampWidth;
-  transform: translateX(-50%);
-  height: ($bottomHeight * 4);
-  shape-outside: polygon(
-    0% 100%,
-    100% 100%,
-    70% 0%,
-    30% 0%,
-  );
-  clip-path: polygon(
-    0% 100%,
-    100% 100%,
-    70% 0%,
-    30% 0%,
+  .lamp-cap {
+    width: $lampWidth;
+    height: $bottomHeight / 1.5;
+    background: -webkit-linear-gradient(15deg, $main, adjust-color($main, $red: 50, $blue: 50, $green: 50));
+    @include topCap();
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    position: relative;
+    shape-outside: polygon(
+      35% 0%,
+      65% 0%,
+      70% 100%,
+      30% 100%,
     );
-  background-color: rgba(0, 0, 0, 0);
-  
-  z-index: -400;
-  // border-left: $bottomHeight solid transparent;
-  // border-right: $bottomHeight solid transparent;
-  // border-bottom: ($bottomHeight * 4) solid blue;
-}
-
-// left side shadow
-.lamp-shadow-2 {
-  width: $lampWidth / 10;
-  height: $bottomHeight * 4;
-  position: absolute;
-  left: 50%;
-  transform: skewX( -(math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) ) translateX(-360%);
-  // transform: skewX(-8.5deg) translateX(-360%);
-  z-index: -500;
-  background-color: rgba(255,255,255 , 0.0);
-  shape-outside: polygon(
-    0% 100%,
-    100% 100%,
-    70% 0%,
-    30% 0%,
-  );
-  box-shadow: 0px 0px 75px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
-}
-
-// absolute position, same as .lamp div, the only difference is the color and color orientation.
-// 50% transparent so that the color of the div behind it is seen as well.
-// the purpose of this is to give the lamp a more realistic color gradient, starting from bottom center
-// this also covers the lava ball
-.lamp-translucent-cover {
-  width: $lampWidth;
-  height: $bottomHeight * 4;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background: $second;
-  z-index: 500;
-  background: linear-gradient(90deg, $liquid 0%, $liquidGradient 50%, $liquid 100%); 
-  shape-outside: polygon(
-    0% 100%,
-    100% 100%,
-    70% 0%,
-    30% 0%,
-  );
-  clip-path: polygon(
-    0% 100%,
-    100% 100%,
-    70% 0%,
-    30% 0%,
-  );
-}
-
-// the glass lamp
-.lamp {
-  width: $lampWidth;
-  height: $bottomHeight * 4;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
-  background: -webkit-linear-gradient($liquid, adjust-color($liquid, $red: 120, $blue: 120, $green: 120));
-  shape-outside: polygon(
-    0% 100%,
-    100% 100%,
-    70% 0%,
-    30% 0%,
-  );
-  clip-path: polygon(
-    0% 100%,
-    100% 100%,
-    70% 0%,
-    30% 0%,
+    clip-path: polygon(
+      35% 0%,
+      65% 0%,
+      70% 100%,
+      30% 100%,
     );
-}
+  } 
 
-// ellipse between glass and base
-.middle-ellipse {
-  background-color: $liquid;
-  height: $bottomHeight / 10;
-  width: $lampWidth;
-  position: relative;
-  margin-top: -($bottomHeight / 20);
-  margin-bottom: -($bottomHeight / 20);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  shape-outside: ellipse(50% 50%);
-  clip-path: ellipse(50% 50%);
-}
+  // ellipse on bottom of cap
+  .cap-ellipse {
+    background-color: adjust-color($main, $red: 50, $blue: 50, $green: 50);
+    height: $bottomHeight / 10;
+    width: $lampWidth;
+    position: relative;
+    margin-top: -($bottomHeight / 20);
+    margin-bottom: -($bottomHeight / 20);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    shape-outside: ellipse(20% 40%);
+    clip-path: ellipse(20% 40%);
+  }
 
-// top of base
-.lamp-top {
-  width: $lampWidth;
-  height: $bottomHeight * 1.3;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  background: -webkit-linear-gradient($second, $main);
-  border-radius: 7px 7px 10px 10px;
-  border-top: 3px inset black;
-  shape-outside: polygon(
-    0% 0%,
-    100% 0,
-    80% 100%,
-    20% 100%,
-  );
-  clip-path: polygon(
-    0% 0%,
-    100% 0,
-    80% 100%,
-    20% 100%,
-  );
-  z-index: 2;
-}
+  // right side shadow
+  .lamp-shadow {
+    width: $lampWidth / 10;
+    height: $bottomHeight * 4;
+    position: absolute;
+    left: 50%;
+    // calculating the skew angle: since the clip path is at 30% width of the lamp, use that and height of lamp to calculate angle
+    transform: skewX( math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) translateX(260%);
+    z-index: -500;
+    background-color: rgba(255,255,255 , 0.0);
+    shape-outside: polygon(
+      0% 100%,
+      100% 100%,
+      70% 0%,
+      30% 0%,
+    );
+    box-shadow: 0px 0px 75px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
+  }
 
-// bottom of base
-.lamp-bottom {
-  width: $lampWidth;
-  height: $bottomHeight;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  shape-outside: polygon(
-    20% 0,
-    80% 0,
-    100% 100%,
-    0 100%
-  );
-  clip-path: polygon(
-    20% 0,
-    80% 0,
-    100% 100%,
-    0 100%
-  );
-  background: -webkit-linear-gradient($main, $second);
-  border-radius: 10px;
-  z-index: 2;
-}
+  // a polygon to cover the gap between the two shadow boxes on the side
+  .lamp-shadow-mid {
+    position: absolute;
+    left: 50%;
+    width: $lampWidth;
+    transform: translateX(-50%);
+    height: ($bottomHeight * 4);
+    shape-outside: polygon(
+      0% 100%,
+      100% 100%,
+      70% 0%,
+      30% 0%,
+    );
+    clip-path: polygon(
+      0% 100%,
+      100% 100%,
+      70% 0%,
+      30% 0%,
+      );
+    background-color: rgba(0, 0, 0, 0);
+    
+    z-index: -400;
+    // border-left: $bottomHeight solid transparent;
+    // border-right: $bottomHeight solid transparent;
+    // border-bottom: ($bottomHeight * 4) solid blue;
+  }
 
-// ellipse on bottom of base
-.bottom-ellipse {
-  width: $lampWidth;
-  height: $bottomHeight / 4;
-  position: relative;
-  left: 50%;
-  z-index: 1;
-  transform: translateY(-60%) translateX(-50%);
-  shape-outside: ellipse(50% 50%);
-  clip-path: ellipse(50% 50%);
-  background: $second;
+  // left side shadow
+  .lamp-shadow-2 {
+    width: $lampWidth / 10;
+    height: $bottomHeight * 4;
+    position: absolute;
+    left: 50%;
+    transform: skewX( -(math.atan( ($lampWidth * 0.3) / ($bottomHeight * 4) ) ) ) translateX(-360%);
+    // transform: skewX(-8.5deg) translateX(-360%);
+    z-index: -500;
+    background-color: rgba(255,255,255 , 0.0);
+    shape-outside: polygon(
+      0% 100%,
+      100% 100%,
+      70% 0%,
+      30% 0%,
+    );
+    box-shadow: 0px 0px 75px adjust-color($main, $red: $whitenShadow, $green: $whitenShadow, $blue: $whitenShadow) ;
+  }
+
+  // absolute position, same as .lamp div, the only difference is the color and color orientation.
+  // 50% transparent so that the color of the div behind it is seen as well.
+  // the purpose of this is to give the lamp a more realistic color gradient, starting from bottom center
+  // this also covers the lava ball
+  .lamp-translucent-cover {
+    width: $lampWidth;
+    height: $bottomHeight * 4;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $second;
+    z-index: 500;
+    background: linear-gradient(90deg, $liquid 0%, $liquidGradient 50%, $liquid 100%); 
+    shape-outside: polygon(
+      0% 100%,
+      100% 100%,
+      70% 0%,
+      30% 0%,
+    );
+    clip-path: polygon(
+      0% 100%,
+      100% 100%,
+      70% 0%,
+      30% 0%,
+    );
+  }
+
+  // the glass lamp
+  .lamp {
+    width: $lampWidth;
+    height: $bottomHeight * 4;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    background: -webkit-linear-gradient($liquid, adjust-color($liquid, $red: 120, $blue: 120, $green: 120));
+    shape-outside: polygon(
+      0% 100%,
+      100% 100%,
+      70% 0%,
+      30% 0%,
+    );
+    clip-path: polygon(
+      0% 100%,
+      100% 100%,
+      70% 0%,
+      30% 0%,
+      );
+  }
+
+  // ellipse between glass and base
+  .middle-ellipse {
+    background-color: $liquid;
+    height: $bottomHeight / 10;
+    width: $lampWidth;
+    position: relative;
+    margin-top: -($bottomHeight / 20);
+    margin-bottom: -($bottomHeight / 20);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    shape-outside: ellipse(50% 50%);
+    clip-path: ellipse(50% 50%);
+  }
+
+  // top of base
+  .lamp-top {
+    width: $lampWidth;
+    height: $bottomHeight * 1.3;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: -webkit-linear-gradient($second, $main);
+    border-radius: 7px 7px 10px 10px;
+    border-top: 3px inset black;
+    shape-outside: polygon(
+      0% 0%,
+      100% 0,
+      80% 100%,
+      20% 100%,
+    );
+    clip-path: polygon(
+      0% 0%,
+      100% 0,
+      80% 100%,
+      20% 100%,
+    );
+    z-index: 2;
+  }
+
+  // bottom of base
+  .lamp-bottom {
+    width: $lampWidth;
+    height: $bottomHeight;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    shape-outside: polygon(
+      20% 0,
+      80% 0,
+      100% 100%,
+      0 100%
+    );
+    clip-path: polygon(
+      20% 0,
+      80% 0,
+      100% 100%,
+      0 100%
+    );
+    background: -webkit-linear-gradient($main, $second);
+    border-radius: 10px;
+    z-index: 2;
+  }
+
+  // ellipse on bottom of base
+  .bottom-ellipse {
+    width: $lampWidth;
+    height: $bottomHeight / 4;
+    position: relative;
+    left: 50%;
+    z-index: 1;
+    transform: translateY(-60%) translateX(-50%);
+    shape-outside: ellipse(50% 50%);
+    clip-path: ellipse(50% 50%);
+    background: $second;
+  }
 }
