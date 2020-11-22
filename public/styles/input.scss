@@ -4,6 +4,8 @@
 $main: indigo;
 $text: rgb(215, 250, 245);
 $second: rgb(174, 1, 190);
+$header: rgb(230, 255, 251);
+
 
 body {
   background-color: rgb(0, 0, 0);
@@ -13,10 +15,12 @@ body {
   font-family: 'Modak', cursive;
   // background-attachment: fixed;
 }
-.jumbotron {
+.jumbotron-fluid, #about-body {
   background-image: url('../img/abstract-wax.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+.jumbotron-fluid {
   border-bottom: 5px outset $main;
 }
 
@@ -82,4 +86,26 @@ body {
 
 .nav-active {
   color: adjust-color($text, $red: -80, $green: -80, $blue: 20)
+}
+
+.about-container {
+  height: 100%;
+  box-shadow: 0 5px 5px black;
+  color: $text;
+  background-color: rgb(40, 40, 50);
+  padding-bottom: 1em;
+}
+.about-jumbotron {
+  background-color: $text;
+}
+
+.about-container h1 {
+  color: $header;
+}
+hr {
+  background-color: $second;
+}
+
+#sass-logo {
+  width: auto;
 }

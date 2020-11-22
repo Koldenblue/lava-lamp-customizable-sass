@@ -991,10 +991,13 @@ body {
   font-family: "Modak", cursive;
 }
 
-.jumbotron {
+.jumbotron-fluid, #about-body {
   background-image: url("../img/abstract-wax.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.jumbotron-fluid {
   border-bottom: 5px outset indigo;
 }
 
@@ -1057,6 +1060,30 @@ body {
 
 .nav-active {
   color: #87aaff;
+}
+
+.about-container {
+  height: 100%;
+  box-shadow: 0 5px 5px black;
+  color: #d7faf5;
+  background-color: #282832;
+  padding-bottom: 1em;
+}
+
+.about-jumbotron {
+  background-color: #d7faf5;
+}
+
+.about-container h1 {
+  color: #e6fffb;
+}
+
+hr {
+  background-color: #ae01be;
+}
+
+#sass-logo {
+  width: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
