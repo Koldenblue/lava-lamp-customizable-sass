@@ -115,7 +115,7 @@
   position: absolute;
   background: #fcb045;
   background: linear-gradient(0deg, #fcb045 0%, #fd1d1d 53%, #b43a7a 100%);
-  padding: 55.5555555556px;
+  padding: 57.1428571429px;
   top: 0%;
   left: 72%;
   transform: translateX(-50%) translateY(-50%);
@@ -185,10 +185,10 @@
 }
 .purple-lamp .top-cap-ellipse {
   background: #fd1d1d;
-  height: 10px;
+  height: 8px;
   width: 200px;
   position: relative;
-  margin-bottom: -5px;
+  margin-bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
   shape-outside: ellipse(15% 40%);
@@ -196,10 +196,10 @@
 }
 .purple-lamp .lamp-cap {
   width: 200px;
-  height: 66.6666666667px;
+  height: 53.3333333333px;
   background: -webkit-linear-gradient(15deg, indigo, #7d32b4);
-  background: #833ac8;
-  background: linear-gradient(108deg, #833ac8 0%, #fd1d1d 50%, #fcb045 100%);
+  background: #d25627;
+  background: linear-gradient(108deg, #d25627 0%, #fd1d1d 50%, #fcb045 100%);
   left: 50%;
   transform: translateX(-50%);
   z-index: -2;
@@ -208,12 +208,12 @@
   clip-path: polygon(35% 0%, 65% 0%, 70% 100%, 30% 100%);
 }
 .purple-lamp .cap-ellipse {
-  background-color: #7d32b4;
-  height: 10px;
+  background-color: #ff8859;
+  height: 8px;
   width: 200px;
   position: relative;
-  margin-top: -5px;
-  margin-bottom: -5px;
+  margin-top: -4px;
+  margin-bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
@@ -222,10 +222,10 @@
 }
 .purple-lamp .lamp-shadow {
   width: 20px;
-  height: 400px;
+  height: 320px;
   position: absolute;
   left: 50%;
-  transform: skewX(8.5307656099deg) translateX(260%);
+  transform: skewX(10.6196552762deg) translateX(260%);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
@@ -236,7 +236,7 @@
   left: 50%;
   width: 200px;
   transform: translateX(-50%);
-  height: 400px;
+  height: 320px;
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
   clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
   background-color: rgba(0, 0, 0, 0);
@@ -244,10 +244,10 @@
 }
 .purple-lamp .lamp-shadow-2 {
   width: 20px;
-  height: 400px;
+  height: 320px;
   position: absolute;
   left: 50%;
-  transform: skewX(-8.5307656099deg) translateX(-360%);
+  transform: skewX(-10.6196552762deg) translateX(-360%);
   z-index: -500;
   background-color: rgba(255, 255, 255, 0);
   shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
@@ -255,7 +255,7 @@
 }
 .purple-lamp .lamp-translucent-cover {
   width: 200px;
-  height: 400px;
+  height: 320px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -267,7 +267,7 @@
 }
 .purple-lamp .lamp {
   width: 200px;
-  height: 400px;
+  height: 320px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -277,25 +277,25 @@
   clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
 }
 .purple-lamp .middle-ellipse {
-  background-color: rgba(174, 1, 190, 0.5);
-  height: 10px;
+  background-color: #410c4b;
+  height: 8px;
   width: 200px;
   position: relative;
-  margin-top: -5px;
-  margin-bottom: -5px;
+  margin-top: -4px;
+  margin-bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: 10;
   shape-outside: ellipse(50% 50%);
   clip-path: ellipse(50% 50%);
 }
 .purple-lamp .lamp-top {
   width: 200px;
-  height: 130px;
+  height: 104px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  background: -webkit-linear-gradient(#ae01be, indigo);
+  background: -webkit-linear-gradient(#410c4b, #241c97);
   border-radius: 7px 7px 10px 10px;
   border-top: 3px inset black;
   shape-outside: polygon(0% 0%, 100% 0, 80% 100%, 20% 100%);
@@ -304,17 +304,345 @@
 }
 .purple-lamp .lamp-bottom {
   width: 200px;
+  height: 80px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  shape-outside: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  background: -webkit-linear-gradient(#241c97, #410c4b);
+  border-radius: 10px;
+  z-index: 2;
+}
+.purple-lamp .bottom-ellipse {
+  width: 200px;
+  height: 20px;
+  position: relative;
+  left: 50%;
+  z-index: 1;
+  transform: translateY(-60%) translateX(-50%);
+  shape-outside: ellipse(50% 50%);
+  clip-path: ellipse(50% 50%);
+  background: #410c4b;
+}
+
+/* ========= Customizable lamp parameters =========== */
+/* =================================================== */
+.green-lamp .lava-3 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #fd1d1d 53%, #b43a7a 100%);
+  width: 50px;
+  height: 50px;
+  top: 20%;
+  left: 60%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 20;
+  box-shadow: 0px 0px 100px #ff9900;
+  border-radius: 5000px;
+  shape-outside: ellipse(40% 34%);
+  clip-path: ellipse(40% 34%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .green-lamp .lava-3 {
+    animation: lava-3 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-3 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 20%;
+    shape-outside: ellipse(40% 34%);
+    clip-path: ellipse(40% 34%);
+  }
+  50% {
+    top: 15%;
+    transform: translateX(-50%) translateY(-50%);
+    shape-outside: ellipse(44% 45%);
+    clip-path: ellipse(44% 45%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 20%;
+    shape-outside: ellipse(40% 34%);
+    clip-path: ellipse(40% 34%);
+  }
+}
+.green-lamp .lava-2 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #fd1d1d 53%, #b43a7a 100%);
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  left: 40%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 19;
+  box-shadow: 0px 0px 100px #ff9900;
+  border-radius: 5000px;
+  shape-outside: ellipse(30% 45%);
+  clip-path: ellipse(30% 45%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .green-lamp .lava-2 {
+    animation: lava-2 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-2 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 30%;
+    shape-outside: ellipse(30% 45%);
+    clip-path: ellipse(30% 45%);
+  }
+  50% {
+    top: 45%;
+    transform: translateX(-50%) translateY(-50%);
+    shape-outside: ellipse(40% 45%);
+    clip-path: ellipse(40% 45%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 30%;
+    shape-outside: ellipse(30% 45%);
+    clip-path: ellipse(30% 45%);
+  }
+}
+.green-lamp .lava-1 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #fd1d1d 53%, #b43a7a 100%);
+  padding: 55.5555555556px;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 21;
+  box-shadow: 0px 0px 100px #ff9900;
+  border-radius: 5000px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .green-lamp .lava-1 {
+    animation: lava-1 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-1 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
+  }
+  50% {
+    top: 60%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
+  }
+}
+.green-lamp .lava-4 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #fd1d1d 53%, #b43a7a 100%);
+  padding: 57.1428571429px;
+  top: 0%;
+  left: 72%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 19;
+  box-shadow: 0px 0px 100px #ff9900;
+  border-radius: 5000px;
+  shape-outside: ellipse(25% 45%);
+  clip-path: ellipse(25% 45%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .green-lamp .lava-4 {
+    animation: lava-4 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-4 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 90%;
+    shape-outside: ellipse(25% 45%);
+    clip-path: ellipse(25% 45%);
+  }
+  50% {
+    top: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    shape-outside: ellipse(40% 35%);
+    clip-path: ellipse(40% 35%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 90%;
+    shape-outside: ellipse(25% 45%);
+    clip-path: ellipse(25% 45%);
+  }
+}
+.green-lamp .lava-0 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #fd1d1d 53%, #b43a7a 100%);
+  padding: 111.1111111111px;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 22;
+  box-shadow: 0px 0px 100px #ff9900;
+  border-radius: 5000px;
+  shape-outside: ellipse(45% 25%);
+  clip-path: ellipse(45% 25%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .green-lamp .lava-0 {
+    animation: lava-0 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-0 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 107%;
+  }
+  50% {
+    top: 102%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 107%;
+  }
+}
+.green-lamp .top-cap-ellipse {
+  background: #969696;
+  height: 10px;
+  width: 200px;
+  position: relative;
+  margin-bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  shape-outside: ellipse(15% 40%);
+  clip-path: ellipse(15% 40%);
+}
+.green-lamp .lamp-cap {
+  width: 200px;
+  height: 66.6666666667px;
+  background: -webkit-linear-gradient(15deg, #002b15, #325d47);
+  background: #6bcfa0;
+  background: linear-gradient(108deg, #6bcfa0 0%, #969696 50%, #202020 100%);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+  position: relative;
+  shape-outside: polygon(35% 0%, 65% 0%, 70% 100%, 30% 100%);
+  clip-path: polygon(35% 0%, 65% 0%, 70% 100%, 30% 100%);
+}
+.green-lamp .cap-ellipse {
+  background-color: #9dffd2;
+  height: 10px;
+  width: 200px;
+  position: relative;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  shape-outside: ellipse(20% 40%);
+  clip-path: ellipse(20% 40%);
+}
+.green-lamp .lamp-shadow {
+  width: 20px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: skewX(8.5307656099deg) translateX(260%);
+  z-index: -500;
+  background-color: rgba(255, 255, 255, 0);
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  box-shadow: 0px 0px 75px #507b65;
+}
+.green-lamp .lamp-shadow-mid {
+  position: absolute;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-50%);
+  height: 400px;
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -400;
+}
+.green-lamp .lamp-shadow-2 {
+  width: 20px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: skewX(-8.5307656099deg) translateX(-360%);
+  z-index: -500;
+  background-color: rgba(255, 255, 255, 0);
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  box-shadow: 0px 0px 75px #507b65;
+}
+.green-lamp .lamp-translucent-cover {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #5f7000;
+  z-index: 500;
+  background: linear-gradient(90deg, rgba(95, 112, 0, 0.5) 0%, rgba(101, 201, 0, 0.4) 50%, rgba(95, 112, 0, 0.5) 100%);
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+}
+.green-lamp .lamp {
+  width: 200px;
+  height: 400px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background: -webkit-linear-gradient(rgba(95, 112, 0, 0.5), rgba(215, 232, 120, 0.5));
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+}
+.green-lamp .middle-ellipse {
+  background-color: #969696;
+  height: 10px;
+  width: 200px;
+  position: relative;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  shape-outside: ellipse(50% 50%);
+  clip-path: ellipse(50% 50%);
+}
+.green-lamp .lamp-top {
+  width: 200px;
+  height: 130px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background: -webkit-linear-gradient(#969696, #202020);
+  border-radius: 7px 7px 10px 10px;
+  border-top: 3px inset black;
+  shape-outside: polygon(0% 0%, 100% 0, 80% 100%, 20% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 80% 100%, 20% 100%);
+  z-index: 2;
+}
+.green-lamp .lamp-bottom {
+  width: 200px;
   height: 100px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   shape-outside: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
   clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
-  background: -webkit-linear-gradient(indigo, #ae01be);
+  background: -webkit-linear-gradient(#202020, #969696);
   border-radius: 10px;
   z-index: 2;
 }
-.purple-lamp .bottom-ellipse {
+.green-lamp .bottom-ellipse {
   width: 200px;
   height: 25px;
   position: relative;
@@ -323,7 +651,335 @@
   transform: translateY(-60%) translateX(-50%);
   shape-outside: ellipse(50% 50%);
   clip-path: ellipse(50% 50%);
-  background: #ae01be;
+  background: #969696;
+}
+
+/* ========= Customizable lamp parameters =========== */
+/* =================================================== */
+.blue-lamp .lava-3 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #1dfd94 53%, #3a83b4 100%);
+  width: 50px;
+  height: 50px;
+  top: 20%;
+  left: 60%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 20;
+  box-shadow: 0px 0px 100px red;
+  border-radius: 5000px;
+  shape-outside: ellipse(40% 34%);
+  clip-path: ellipse(40% 34%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .blue-lamp .lava-3 {
+    animation: lava-3 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-3 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 20%;
+    shape-outside: ellipse(40% 34%);
+    clip-path: ellipse(40% 34%);
+  }
+  50% {
+    top: 15%;
+    transform: translateX(-50%) translateY(-50%);
+    shape-outside: ellipse(44% 45%);
+    clip-path: ellipse(44% 45%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 20%;
+    shape-outside: ellipse(40% 34%);
+    clip-path: ellipse(40% 34%);
+  }
+}
+.blue-lamp .lava-2 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #1dfd94 53%, #3a83b4 100%);
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  left: 40%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 19;
+  box-shadow: 0px 0px 100px red;
+  border-radius: 5000px;
+  shape-outside: ellipse(30% 45%);
+  clip-path: ellipse(30% 45%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .blue-lamp .lava-2 {
+    animation: lava-2 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-2 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 30%;
+    shape-outside: ellipse(30% 45%);
+    clip-path: ellipse(30% 45%);
+  }
+  50% {
+    top: 45%;
+    transform: translateX(-50%) translateY(-50%);
+    shape-outside: ellipse(40% 45%);
+    clip-path: ellipse(40% 45%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 30%;
+    shape-outside: ellipse(30% 45%);
+    clip-path: ellipse(30% 45%);
+  }
+}
+.blue-lamp .lava-1 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #1dfd94 53%, #3a83b4 100%);
+  padding: 55.5555555556px;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 21;
+  box-shadow: 0px 0px 100px red;
+  border-radius: 5000px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .blue-lamp .lava-1 {
+    animation: lava-1 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-1 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
+  }
+  50% {
+    top: 60%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 55%;
+  }
+}
+.blue-lamp .lava-4 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #1dfd94 53%, #3a83b4 100%);
+  padding: 57.1428571429px;
+  top: 0%;
+  left: 72%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 19;
+  box-shadow: 0px 0px 100px red;
+  border-radius: 5000px;
+  shape-outside: ellipse(25% 45%);
+  clip-path: ellipse(25% 45%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .blue-lamp .lava-4 {
+    animation: lava-4 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-4 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 90%;
+    shape-outside: ellipse(25% 45%);
+    clip-path: ellipse(25% 45%);
+  }
+  50% {
+    top: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    shape-outside: ellipse(40% 35%);
+    clip-path: ellipse(40% 35%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 90%;
+    shape-outside: ellipse(25% 45%);
+    clip-path: ellipse(25% 45%);
+  }
+}
+.blue-lamp .lava-0 {
+  position: absolute;
+  background: #fcb045;
+  background: linear-gradient(0deg, #fcb045 0%, #1dfd94 53%, #3a83b4 100%);
+  padding: 111.1111111111px;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 22;
+  box-shadow: 0px 0px 100px red;
+  border-radius: 5000px;
+  shape-outside: ellipse(45% 25%);
+  clip-path: ellipse(45% 25%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .blue-lamp .lava-0 {
+    animation: lava-0 infinite 20s ease-in-out;
+  }
+}
+@keyframes lava-0 {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 107%;
+  }
+  50% {
+    top: 102%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    top: 107%;
+  }
+}
+.blue-lamp .top-cap-ellipse {
+  background: #1dfd94;
+  height: 10px;
+  width: 200px;
+  position: relative;
+  margin-bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  shape-outside: ellipse(15% 40%);
+  clip-path: ellipse(15% 40%);
+}
+.blue-lamp .lamp-cap {
+  width: 200px;
+  height: 66.6666666667px;
+  background: -webkit-linear-gradient(15deg, #140082, #4632b4);
+  background: #00ff9e;
+  background: linear-gradient(108deg, #00ff9e 0%, #1dfd94 50%, #fcb045 100%);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+  position: relative;
+  shape-outside: polygon(35% 0%, 65% 0%, 70% 100%, 30% 100%);
+  clip-path: polygon(35% 0%, 65% 0%, 70% 100%, 30% 100%);
+}
+.blue-lamp .cap-ellipse {
+  background-color: #32ffd0;
+  height: 10px;
+  width: 200px;
+  position: relative;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  shape-outside: ellipse(20% 40%);
+  clip-path: ellipse(20% 40%);
+}
+.blue-lamp .lamp-shadow {
+  width: 20px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: skewX(8.5307656099deg) translateX(260%);
+  z-index: -500;
+  background-color: rgba(255, 255, 255, 0);
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  box-shadow: 0px 0px 75px #6450d2;
+}
+.blue-lamp .lamp-shadow-mid {
+  position: absolute;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-50%);
+  height: 400px;
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -400;
+}
+.blue-lamp .lamp-shadow-2 {
+  width: 20px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: skewX(-8.5307656099deg) translateX(-360%);
+  z-index: -500;
+  background-color: rgba(255, 255, 255, 0);
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  box-shadow: 0px 0px 75px #6450d2;
+}
+.blue-lamp .lamp-translucent-cover {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0143be;
+  z-index: 500;
+  background: linear-gradient(90deg, rgba(1, 67, 190, 0.5) 0%, rgba(7, 156, 190, 0.4) 50%, rgba(1, 67, 190, 0.5) 100%);
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+}
+.blue-lamp .lamp {
+  width: 200px;
+  height: 400px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background: -webkit-linear-gradient(rgba(1, 67, 190, 0.5), rgba(121, 187, 255, 0.5));
+  shape-outside: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 70% 0%, 30% 0%);
+}
+.blue-lamp .middle-ellipse {
+  background-color: #0143be;
+  height: 10px;
+  width: 200px;
+  position: relative;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  shape-outside: ellipse(50% 50%);
+  clip-path: ellipse(50% 50%);
+}
+.blue-lamp .lamp-top {
+  width: 200px;
+  height: 130px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background: -webkit-linear-gradient(#0143be, #140082);
+  border-radius: 7px 7px 10px 10px;
+  border-top: 3px inset black;
+  shape-outside: polygon(0% 0%, 100% 0, 80% 100%, 20% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 80% 100%, 20% 100%);
+  z-index: 2;
+}
+.blue-lamp .lamp-bottom {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  shape-outside: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  background: -webkit-linear-gradient(#140082, #0143be);
+  border-radius: 10px;
+  z-index: 2;
+}
+.blue-lamp .bottom-ellipse {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  left: 50%;
+  z-index: 1;
+  transform: translateY(-60%) translateX(-50%);
+  shape-outside: ellipse(50% 50%);
+  clip-path: ellipse(50% 50%);
+  background: #0143be;
 }
 
 body {
@@ -381,6 +1037,13 @@ body {
 }
 .jumbotron h1 {
   font-size: 6rem;
+}
+.jumbotron button {
+  color: #d7faf5 !important;
+  font-size: larger;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
 }
 
 .navbar {
