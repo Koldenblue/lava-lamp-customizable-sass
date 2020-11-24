@@ -1044,7 +1044,7 @@ body {
 
 button {
   color: #d7faf5 !important;
-  font-size: larger;
+  font-size: xx-large !important;
   left: 50%;
   position: relative;
   transform: translateX(-50%);
@@ -1090,6 +1090,12 @@ hr {
 
 #lava-gif-button {
   margin: 1em;
+}
+
+.lava-gif {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */
