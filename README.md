@@ -11,7 +11,7 @@
 5. <a href="#license">License</a>
 6. <a href="#questions">Issues and Questions</a>
 <hr><h3 id='description'>Description</h3>
-<p>This webpage presents an animated model of a lava-lamp which is easily portable to other websites. The lava lamp models are generated entirely with CSS, and animated using CSS keyframes. Sass pre-processing allows for easy customization with minimal coding - variables such as color, width, height, and shadowing can easily be changed simply by changing the appropriate values at the top of the lava lamp SCSS file. The lamp itself can be dropped into other websites simply by pastiong the appropriate html code, and adding the lamp SCSS module to the existing SCSS files for a website.</p>
+<p>This webpage presents an animated model of a lava-lamp which is easily portable to other websites. The lava lamp models are generated entirely with CSS, and animated using CSS keyframes. Sass pre-processing allows for easy customization with minimal coding - variables such as color, width, height, and shadowing can easily be changed simply by changing the appropriate values at the top of the lava lamp SCSS file. The lamp itself can be dropped into other websites simply by pasting the appropriate html code, and adding the lamp SCSS module to the existing SCSS files for a website.</p>
 
 <p>Additionally, Express.js is used for back-end routing functionality. Users can navigate through the simple website to view information about lava lamps, view pictures of lava lamps, or view information about the website itself. Finally, JavaScript propgramming allows for asynchronous API calls which find and retrieve images of lava lamps. </p>
 

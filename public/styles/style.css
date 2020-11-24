@@ -987,7 +987,7 @@ body {
   overflow-x: hidden;
 }
 
-.jumbotron, .bg-text {
+.jumbotron, .bg-text, button {
   font-family: "Modak", cursive;
 }
 
@@ -1041,7 +1041,8 @@ body {
 .jumbotron h1 {
   font-size: 6rem;
 }
-.jumbotron button {
+
+button {
   color: #d7faf5 !important;
   font-size: larger;
   left: 50%;
@@ -1068,6 +1069,7 @@ body {
   color: #d7faf5;
   background-color: #282832;
   padding-bottom: 1em;
+  min-height: 50vh;
 }
 
 .about-jumbotron {

@@ -1,5 +1,8 @@
+
+
 $(document).ready(() => {
   let lamp = $("#lamp-section")
+  let gifBtn = $("#lava-gif-button");
 
   const colorChange = () => {
     if (lamp.attr('class') === 'purple-lamp') {
@@ -13,5 +16,14 @@ $(document).ready(() => {
     }
   }
   
+  const getGif = () => {
+    $.get('/api/lavagif').then(data => {
+      console.log(data);
+    })
+
+
+  }
+
   $("#color-change-btn").on('click', colorChange);
+  gifBtn.on("click", getGif);
 })
