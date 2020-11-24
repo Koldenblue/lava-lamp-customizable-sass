@@ -96,6 +96,7 @@ button {
   background-color: rgb(40, 40, 50);
   padding-bottom: 1em;
   min-height: 50vh;
+  margin-bottom: 2em;
 }
 .about-jumbotron {
   background-color: $text;
@@ -104,6 +105,7 @@ button {
 .about-container h1 {
   color: $header;
 }
+
 hr {
   background-color: $second;
 }
@@ -120,4 +122,13 @@ hr {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  width: -moz-available;
+  max-width: 100%;
+}
+.back-paint {
+  width: 100%;
+}
+
+.gif-col {
+  margin-top: 1em;
 }
