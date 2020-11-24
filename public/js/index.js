@@ -4,6 +4,8 @@ $(document).ready(() => {
   let lamp = $("#lamp-section")
   let gifBtn = $("#lava-gif-button");
   let gifDiv = $("#lava-gif");
+
+  console.log(window.location.pathname)
   const colorChange = () => {
     if (lamp.attr('class') === 'purple-lamp') {
       lamp.attr('class', 'green-lamp');
