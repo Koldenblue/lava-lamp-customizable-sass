@@ -24,30 +24,30 @@
 <h3 id='usage'>Usage</h3>
 <p> To add the lamp graphic to an existing website, two steps are required: first, drop the lamp HTML code into the appropriate website container. Second, add the appropriate Sass file to the existing website SCSS (or less ideally, add in the basic lamp CSS). 
 The HTML file for the lamp may be found in '/public/index.html'. Alternatively, it may be copied here: Along with the appropriate CSS, this is all that is needed to integrate the lava lamp graphic into a website.</p>
-```
-  <section id='lamp-section' class='purple-lamp'>
-    <div class='top-cap-ellipse'></div>
-    <div class='lamp-cap'></div>
-    <div class='cap-ellipse'></div>
-    <div class='lamp-shadow'></div>
-    <div class='lamp-shadow-mid'></div>
-    <div class='lamp-shadow-2'></div>
-    <div class='lamp-translucent-cover'></div>
-    <!-- this next div is simply background text, not part of the lamp -->
-    <div class='bg-text'>LOVE LAVA</div> 
-    <div class='lamp'>
-      <div class='lava-0'></div>
-      <div class='lava-1'></div>
-      <div class='lava-2'></div>
-      <div class='lava-3'></div>
-      <div class='lava-4'></div>
-    </div>
-    <div class='middle-ellipse'></div>
-    <div class='lamp-top'></div>
-    <div class='lamp-bottom'></div>
-    <div class='bottom-ellipse'></div>
-  </section>
-```
+
+    <section id='lamp-section' class='purple-lamp'>
+      <div class='top-cap-ellipse'></div>
+      <div class='lamp-cap'></div>
+      <div class='cap-ellipse'></div>
+      <div class='lamp-shadow'></div>
+      <div class='lamp-shadow-mid'></div>
+      <div class='lamp-shadow-2'></div>
+      <div class='lamp-translucent-cover'></div>
+      <!-- this next div is simply background text, not part of the lamp -->
+      <div class='bg-text'>LOVE LAVA</div> 
+      <div class='lamp'>
+        <div class='lava-0'></div>
+        <div class='lava-1'></div>
+        <div class='lava-2'></div>
+        <div class='lava-3'></div>
+        <div class='lava-4'></div>
+      </div>
+      <div class='middle-ellipse'></div>
+      <div class='lamp-top'></div>
+      <div class='lamp-bottom'></div>
+      <div class='bottom-ellipse'></div>
+    </section>
+
 
 <p>The appropriate CSS for the lamp may be taken from the CSS file, '/public/styles/style.css', which contains separate CSS for 3 lamps. However, it is recommended that Sass be used instead, to allow easy customization and integration into existing SCSS files. Visit the <a href='https://sass-lang.com/'>Sass website</a> for installation and usage instructions. There are three different customized lamp files, _lava.scss, _greenLava.scss, and _blueLava.scss, each in the '/public/styles' folder. The main file, _lava.scss, should be used with the HTML code above, since the class name 'purple-lamp' under the section tag matches the class name in the _lava.scss file. However, this class name can easily be changed in the HTML, as well as by editing a single line of code near the top of the SCSS file (near the top, labeled with a comment). After customization, the _lava.scss files may be imported to the main SCSS file, like any other Sass modules.</p>
 <p>To customize a lamp, simply change the values at the top of the lava lamp SCSS file. Most values, such as color, shadows, or height are simple to customize. The lamp is centered in its container by default. Changing the position to be further left or right in a given container will require manual editing of the 'transform: translate(X)' values under the .lamp-shadow and .lamp-shadow-2 classes. Further customization options may be added in the future, for values such as animation keyframes, additional colors, or additional shading.</p>
