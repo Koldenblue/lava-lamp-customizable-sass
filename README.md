@@ -11,6 +11,8 @@
 5. <a href="#license">License</a>
 6. <a href="#questions">Issues and Questions</a>
 <hr><h3 id='description'>Description</h3>
+
+<p>Check out the deployed <a href=https://sass-lava-lamps.herokuapp.com>website</a>!
 <p>This webpage presents an animated model of a lava-lamp which is easily portable to other websites. The lava lamp models are generated entirely with CSS, and animated using CSS keyframes. Sass pre-processing allows for easy customization with minimal coding - variables such as color, width, height, and shadowing can easily be changed simply by changing the appropriate values at the top of the lava lamp SCSS file. The lamp itself can be dropped into other websites simply by pasting the appropriate html code, and adding the lamp SCSS module to the existing SCSS files for a website.</p>
 
 <p>Additionally, Express.js is used for back-end routing functionality. Users can navigate through the simple website to view information about lava lamps, view pictures of lava lamps, or view information about the website itself. Finally, JavaScript propgramming allows for asynchronous API calls which find and retrieve images of lava lamps. </p>
@@ -18,7 +20,7 @@
 ![image](https://user-images.githubusercontent.com/64618290/99929974-33f8e200-2d04-11eb-9b08-be153e58c7bf.png)  ![image](https://user-images.githubusercontent.com/64618290/99930019-6d315200-2d04-11eb-844b-026b5a60bcb8.png)
 
 <h3 id='installation'>Installation</h3>
-<p>The website may be viewed at ___________. The website may also be run on a local host by cloning this repository, and running 'node server.js' in a Node.js environment. The webpage will be hosted locally on port 8080 by default, at localhost:8080 in a browser.</p>
+<p>The website may be viewed <a href=https://sass-lava-lamps.herokuapp.com>here</a>. The website may also be run on a local host by cloning this repository, and running 'node server.js' in a Node.js environment. The webpage will be hosted locally on port 8080 by default, at localhost:8080 in a browser. Run 'npm install' in the project directory to install files listed in package.json. Sass should also be installed - see the <a href='https://sass-lang.com/'>Sass website</a> for installation details.</p>
 <h3 id='usage'>Usage</h3>
 <p> To add the lamp graphic to an existing website, two steps are required: first, drop the lamp HTML code into the appropriate website container. Second, add the appropriate Sass file to the existing website SCSS (or less ideally, add in the basic lamp CSS). 
 The HTML file for the lamp may be found in '/public/index.html'. Alternatively, it may be copied here: Along with the appropriate CSS, this is all that is needed to integrate the lava lamp graphic into a website.</p>
